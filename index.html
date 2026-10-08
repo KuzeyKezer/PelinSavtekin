@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelin Ferihan Savtekin | ULUSLARARASI İLİŞKİLER | DİPLOMASİ & KOORDİNASYON</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome İkonlar -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Özel CSS Dosyamız -->
+  <link rel="stylesheet" href="style.css">
+</head> 
+<body class="text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 selection:bg-emerald-500 selection:text-black">
+
+  <!-- Rüzgarda Dalgalanan Arka Plan -->
+  <div class="silk-container">
+    <div class="silk-wave wave-1"></div>
+    <div class="silk-wave wave-2"></div>
+    <div class="silk-wave wave-3"></div>
+  </div>
+
+  <!-- Ana İçerik -->
+  <main class="w-full max-w-md mx-auto space-y-4 my-6 relative z-10">
+
+    <!-- Profil Kartı -->
+    <div class="glass-card rounded-3xl p-6 text-center relative overflow-hidden">
+      <!-- Üst Vurgu Çizgisi -->
+      <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
+      
+      <!-- Dil Değiştirici Buton (TR / EN) -->
+      <div class="absolute top-4 right-4 z-20">
+        <button id="langToggle" onclick="toggleLanguage()" class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/80 text-[11px] font-semibold text-slate-300 hover:text-white hover:border-slate-500 transition flex items-center gap-1.5 shadow-sm">
+          <i class="fa-solid fa-globe text-emerald-400 text-[10px]"></i>
+          <span id="langText">EN</span>
+        </button>
+      </div>
+
+      <!-- Profil Fotoğrafı (Çıkıntısız, Temiz) -->
+      <div class="relative w-24 h-24 mx-auto mb-4 mt-2">
+        <img src="pavatar.jpg" alt="Pelin Ferihan Savtekin" class="w-full h-full rounded-full object-cover avatar-halo">
+      </div>
+
+      <!-- İsim & Alan -->
+      <h1 class="text-2xl font-bold tracking-tight text-white">Pelin Ferihan Savtekin</h1>
+      <p id="roleTitle" class="text-xs font-semibold text-emerald-400 tracking-wider uppercase mt-1">ULUSLARARASI İLİŞKİLER | DİPLOMASİ & KOORDİNASYON</p>
+      
+      <!-- Etkinlik Rozeti -->
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 mt-3 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-300 font-medium">
+        <i class="fa-solid fa-earth-americas text-[10px]"></i>
+        <span id="badgeText">COP31 Operasyon Ekibi</span>
+      </div>
+
+      <!-- Özet -->
+      <p id="bioText" class="text-xs text-slate-300/90 mt-3 leading-relaxed font-normal">
+Ege Üniversitesi Uluslararası İlişkiler öğrencisi. İspanya'da 10 aylık Erasmus eğitimini tamamladı. Kamu yönetimi, kriz çözümü, çok uluslu etkinlik koordinasyonu ve Model UN liderlik tecrübesine sahip.      </p>
+
+      <!-- Ana Aksiyon Butonları -->
+      <div class="grid grid-cols-2 gap-3 mt-6">
+        <!-- vCard Butonu -->
+        <a href="rehber.vcf" download class="btn-primary-glow flex items-center justify-center gap-2 text-slate-950 font-bold py-2.5 px-3 rounded-xl text-xs">
+          <i class="fa-solid fa-address-card text-sm"></i>
+          <span id="btnSave">Rehbere Kaydet</span>
+        </a>
+        <!-- CV Görüntüleme -->
+        <a id="cvLink" href="pcv.pdf" target="_blank" class="btn-secondary flex items-center justify-center gap-2 text-slate-200 font-semibold py-2.5 px-3 rounded-xl text-xs">
+          <i class="fa-solid fa-file-pdf text-red-400 text-sm"></i>
+          <span id="btnCv">CV'yi İncele</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Deneyim ve Projeler -->
+    <div class="grid grid-cols-1 gap-3">
+      
+      <!-- staj bayraklı  -->
+      <div class="glass-card rounded-2xl p-4 cursor-default">
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 text-base">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 id="proj1Title" class="text-sm font-semibold text-white tracking-tight">Staj / Yönetim</h3>
+              <span id="proj1Tag" class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20 font-medium">Sürdürülebilirlik</span>
+            </div>
+            <p id="proj1Desc" class="text-xs text-slate-400 mt-1 leading-relaxed">
+T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı, devlet teşkilatı pratikleri ve vatandaş iletişimi koordinasyonu.            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deneyim: Operasyon -->
+      <div class="glass-card rounded-2xl p-4 cursor-default">
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0 text-base">
+            <i class="fa-solid fa-truck-ramp-box"></i>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 id="proj2Title" class="text-sm font-semibold text-white tracking-tight">Model UN Genel Sekreterliği & Organizasyon</h3>
+              <span id="proj2Tag" class="text-[10px] text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded-md border border-blue-500/20 font-medium">Liderlik & Kriz Yönetimi</span>
+            </div>
+            <p id="proj2Desc" class="text-xs text-slate-400 mt-1 leading-relaxed">
+500+ katılımcılı konferans liderliği ve bütçe yönetimi; İZFAŞ Mermer Fuarı yabancı katılımcı koordinasyonu ve lojistik desteği.            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sosyal Medya & İletişim Butonları -->
+    <div class="flex items-center justify-center gap-3 py-1">
+      <a href="https://www.linkedin.com/in/pelin-savtekin-7b3213223?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
+        <i class="fa-brands fa-linkedin-in text-base"></i>
+      </a>
+      <a href="mailto:savtekinp@gmail.com" title="E-posta Gönder" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
+        <i class="fa-solid fa-envelope text-base"></i>
+      </a>
+      <a href="https://github.com/KuzeyKezer" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
+        <i class="fa-brands fa-github text-base"></i>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <p id="footerText" class="text-center text-[10px] text-slate-600 font-medium tracking-widest uppercase">
+      Temassız NFC Paylaşımı • COP31
+    </p>
+
+  </main>
+
+<!-- Dil Değiştirme Mantığı -->
+  <script>
+    let currentLang = 'tr';
+
+    const content = {
+      tr: {
+        toggleBtn: 'EN',
+        role: 'LOJİSTİK & OPERASYON | TEDARİK ZİNCİRİ',
+        badge: 'COP31 Operasyon Ekibi',
+        bio: 'Dokuz Eylül Üniversitesi Lojistik Yönetimi 3. sınıf öğrencisi. Süreç tasarımı, operasyonel dokümantasyon ve sürdürülebilir iş modelleri üzerine odaklanıyorum.',
+        btnSave: 'Rehbere Kaydet',
+        btnCv: "CV'yi İncele",
+        cvFile: 'cv.pdf', // Türkçe CV
+        proj1Title: 'Nimet Girişimi',
+        proj1Tag: 'Sürdürülebilirlik',
+        proj1Desc: 'Gıda israfını önlemeye yönelik dijital sürpriz kutu modeli. TÜBİTAK BİGG paneli süreci ve saha pilot denemesi tamamlandı.',
+        proj2Title: 'Lojistik & Saha Pratiği',
+        proj2Tag: 'Operasyon',
+        proj2Desc: 'Enatrans Lojistik operasyonel dokümantasyon desteği; tedarik zinciri optimizasyonu ve vaka analizi çalışmaları.',
+        footer: 'Temassız NFC Paylaşımı • COP31'
+      },
+      en: {
+        toggleBtn: 'TR',
+        role: 'LOGISTICS & OPERATIONS | SUPPLY CHAIN',
+        badge: 'COP31 Operations Team',
+        bio: 'Junior Logistics Management student at Dokuz Eylül University. Focusing on process design, operational documentation, and sustainable business models.',
+        btnSave: 'Save Contact',
+        btnCv: 'View Resume',
+        cvFile: 'cv-en.pdf', // İngilizce CV
+        proj1Title: 'Nimet Initiative',
+        proj1Tag: 'Sustainability',
+        proj1Desc: 'A digital surplus-box venture aimed at reducing bakery food waste. TÜBİTAK BİGG panelist & local pilot completed.',
+        proj2Title: 'Logistics Operations',
+        proj2Tag: 'Field Experience',
+        proj2Desc: '6-month operational documentation support at Enatrans Logistics; supply chain case studies and simulation models.',
+        footer: 'Contactless NFC Sharing • COP31'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'tr' ? 'en' : 'tr';
+      const c = content[currentLang];
+
+      document.getElementById('langText').textContent = c.toggleBtn;
+      document.getElementById('roleTitle').textContent = c.role;
+      document.getElementById('badgeText').textContent = c.badge;
+      document.getElementById('bioText').textContent = c.bio;
+      document.getElementById('btnSave').textContent = c.btnSave;
+      document.getElementById('btnCv').textContent = c.btnCv;
+      
+      // CV Linkini Dile Göre Güncelle:
+      document.getElementById('cvLink').setAttribute('href', c.cvFile);
+
+      document.getElementById('proj1Title').textContent = c.proj1Title;
+      document.getElementById('proj1Tag').textContent = c.proj1Tag;
+      document.getElementById('proj1Desc').textContent = c.proj1Desc;
+      document.getElementById('proj2Title').textContent = c.proj2Title;
+      document.getElementById('proj2Tag').textContent = c.proj2Tag;
+      document.getElementById('proj2Desc').textContent = c.proj2Desc;
+      document.getElementById('footerText').textContent = c.footer;
+    }
+  </script>
+</body>
+</html>

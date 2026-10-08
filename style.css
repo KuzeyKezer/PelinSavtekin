@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --brand: #10b981;
+  --brand-glow: rgba(16, 185, 129, 0.28);
+  --bg-deep: #06090e;
+  --card-bg: rgba(13, 20, 36, 0.65);
+  --card-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ========================================================
+   RÜZGARDA SALLANAN KUMAŞ / İPEK DALGALAR (SILK WAVES)
+   ======================================================== */
+.silk-container {
+  position: fixed;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  filter: blur(50px);
+  opacity: 0.85;
+}
+
+.silk-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 40% 60% 70% 30% / 35% 45% 55% 65%;
+  will-change: transform, border-radius;
+}
+
+/* 1. Katman: Zümrüt Yeşili & Akış */
+.wave-1 {
+  background: radial-gradient(ellipse at 30% 35%, rgba(16, 185, 129, 0.35) 0%, rgba(5, 150, 105, 0.15) 45%, transparent 70%);
+  animation: drape-flow-1 20s ease-in-out infinite alternate;
+}
+
+/* 2. Katman: Okyanus / Gece Mavisi */
+.wave-2 {
+  background: radial-gradient(ellipse at 70% 65%, rgba(14, 165, 233, 0.28) 0%, rgba(37, 99, 235, 0.12) 50%, transparent 75%);
+  animation: drape-flow-2 26s ease-in-out infinite alternate;
+}
+
+/* 3. Katman: Canlı Teal & Işık Parıltısı */
+.wave-3 {
+  background: radial-gradient(ellipse at 50% 25%, rgba(45, 212, 191, 0.22) 0%, transparent 60%);
+  animation: drape-flow-3 16s ease-in-out infinite alternate;
+}
+
+@keyframes drape-flow-1 {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  }
+  50% {
+    transform: rotate(7deg) scale(1.1) translate(-25px, 35px);
+    border-radius: 65% 35% 50% 50% / 35% 65% 35% 65%;
+  }
+  100% {
+    transform: rotate(-5deg) scale(0.95) translate(35px, -20px);
+    border-radius: 45% 55% 35% 65% / 55% 45% 55% 45%;
+  }
+}
+
+@keyframes drape-flow-2 {
+  0% {
+    transform: rotate(0deg) scale(1.05) translate(15px, -25px);
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+  }
+  50% {
+    transform: rotate(-8deg) scale(0.92) translate(45px, 25px);
+    border-radius: 35% 65% 60% 40% / 50% 30% 70% 50%;
+  }
+  100% {
+    transform: rotate(6deg) scale(1.08) translate(-20px, 45px);
+    border-radius: 60% 40% 50% 50% / 40% 60% 40% 60%;
+  }
+}
+
+@keyframes drape-flow-3 {
+  0% {
+    transform: scale(0.9) translate(-30px, 15px);
+  }
+  100% {
+    transform: scale(1.15) translate(25px, -35px);
+  }
+}
+
+/* ========================================================
+   KARTLAR & ELEMANLAR
+   ======================================================== */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 24px 50px -15px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 28px 55px -12px rgba(16, 185, 129, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.avatar-halo {
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.4), 0 0 25px rgba(16, 185, 129, 0.3);
+}
+
+.pulse-dot {
+  position: relative;
+}
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  z-index: -1;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  70% { transform: scale(2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.btn-primary-glow {
+  background: linear-gradient(135deg, #10b981, #059669);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+}
+
+.btn-primary-glow:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 22px rgba(16, 185, 129, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(51, 65, 85, 0.85);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.social-icon-btn {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+}
+
+.social-icon-btn:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px var(--brand-glow);
+}
