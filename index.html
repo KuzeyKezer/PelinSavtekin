@@ -36,7 +36,7 @@
         </button>
       </div>
 
-      <!-- Profil Fotoğrafı (Çıkıntısız, Temiz) -->
+      <!-- Profil Fotoğrafı -->
       <div class="relative w-24 h-24 mx-auto mb-4 mt-2">
         <img src="pavatar.jpg" alt="Pelin Ferihan Savtekin" class="w-full h-full rounded-full object-cover avatar-halo">
       </div>
@@ -53,12 +53,13 @@
 
       <!-- Özet -->
       <p id="bioText" class="text-xs text-slate-300/90 mt-3 leading-relaxed font-normal">
-Ege Üniversitesi Uluslararası İlişkiler öğrencisi. İspanya'da 10 aylık Erasmus eğitimini tamamladı. Kamu yönetimi, kriz çözümü, çok uluslu etkinlik koordinasyonu ve Model UN liderlik tecrübesine sahip.      </p>
+        Ege Üniversitesi Uluslararası İlişkiler öğrencisi. İspanya'da 10 aylık Erasmus eğitimini tamamladı. Kamu yönetimi, kriz çözümü, çok uluslu etkinlik koordinasyonu ve Model UN liderlik tecrübesine sahip.
+      </p>
 
       <!-- Ana Aksiyon Butonları -->
       <div class="grid grid-cols-2 gap-3 mt-6">
         <!-- vCard Butonu -->
-        <a href="rehber.vcf" download class="btn-primary-glow flex items-center justify-center gap-2 text-slate-950 font-bold py-2.5 px-3 rounded-xl text-xs">
+        <a id="vcfLink" href="rehber.vcf" download class="btn-primary-glow flex items-center justify-center gap-2 text-slate-950 font-bold py-2.5 px-3 rounded-xl text-xs">
           <i class="fa-solid fa-address-card text-sm"></i>
           <span id="btnSave">Rehbere Kaydet</span>
         </a>
@@ -73,28 +74,29 @@ Ege Üniversitesi Uluslararası İlişkiler öğrencisi. İspanya'da 10 aylık E
     <!-- Deneyim ve Projeler -->
     <div class="grid grid-cols-1 gap-3">
       
-      <!-- staj bayraklı  -->
+      <!-- Staj: Bayraklı Kaymakamlığı -->
       <div class="glass-card rounded-2xl p-4 cursor-default">
         <div class="flex items-start gap-3.5">
           <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 text-base">
-            <i class="fa-solid fa-leaf"></i>
+            <i class="fa-solid fa-landmark"></i>
           </div>
           <div>
             <div class="flex items-center justify-between">
               <h3 id="proj1Title" class="text-sm font-semibold text-white tracking-tight">Staj / Yönetim</h3>
-              <span id="proj1Tag" class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20 font-medium">Sürdürülebilirlik</span>
+              <span id="proj1Tag" class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20 font-medium">Operasyon</span>
             </div>
             <p id="proj1Desc" class="text-xs text-slate-400 mt-1 leading-relaxed">
-T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı, devlet teşkilatı pratikleri ve vatandaş iletişimi koordinasyonu.            </p>
+              T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı, devlet teşkilatı pratikleri ve vatandaş iletişimi koordinasyonu.
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Deneyim: Operasyon -->
+      <!-- Deneyim: MUN & Organizasyon -->
       <div class="glass-card rounded-2xl p-4 cursor-default">
         <div class="flex items-start gap-3.5">
           <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0 text-base">
-            <i class="fa-solid fa-truck-ramp-box"></i>
+            <i class="fa-solid fa-users-line"></i>
           </div>
           <div>
             <div class="flex items-center justify-between">
@@ -102,7 +104,8 @@ T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı
               <span id="proj2Tag" class="text-[10px] text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded-md border border-blue-500/20 font-medium">Liderlik & Kriz Yönetimi</span>
             </div>
             <p id="proj2Desc" class="text-xs text-slate-400 mt-1 leading-relaxed">
-500+ katılımcılı konferans liderliği ve bütçe yönetimi; İZFAŞ Mermer Fuarı yabancı katılımcı koordinasyonu ve lojistik desteği.            </p>
+              500+ katılımcılı konferans liderliği ve bütçe yönetimi; İZFAŞ Mermer Fuarı yabancı katılımcı koordinasyonu ve lojistik desteği.
+            </p>
           </div>
         </div>
       </div>
@@ -111,14 +114,11 @@ T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı
 
     <!-- Sosyal Medya & İletişim Butonları -->
     <div class="flex items-center justify-center gap-3 py-1">
-      <a href="https://www.linkedin.com/in/pelin-savtekin-7b3213223?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
+      <a href="https://www.linkedin.com/in/pelin-savtekin-7b3213223" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
         <i class="fa-brands fa-linkedin-in text-base"></i>
       </a>
       <a href="mailto:savtekinp@gmail.com" title="E-posta Gönder" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
         <i class="fa-solid fa-envelope text-base"></i>
-      </a>
-      <a href="https://github.com/KuzeyKezer" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300">
-        <i class="fa-brands fa-github text-base"></i>
       </a>
     </div>
 
@@ -129,7 +129,7 @@ T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı
 
   </main>
 
-<!-- Dil Değiştirme Mantığı -->
+  <!-- Dil Değiştirme Mantığı -->
   <script>
     let currentLang = 'tr';
 
@@ -138,10 +138,10 @@ T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı
         toggleBtn: 'EN',
         role: 'ULUSLARARASI İLİŞKİLER | DİPLOMASİ & KOORDİNASYON',
         badge: 'COP31 Operasyon Ekibi',
-        bio: 'Ege Üniversitesi Uluslararası İlişkiler öğrencisi. İspanya'da 10 aylık Erasmus eğitimini tamamladı. Kamu yönetimi, kriz çözümü, çok uluslu etkinlik koordinasyonu ve Model UN liderlik tecrübesine sahip.',
+        bio: 'Ege Üniversitesi Uluslararası İlişkiler öğrencisi. İspanya\'da 10 aylık Erasmus eğitimini tamamladı. Kamu yönetimi, kriz çözümü, çok uluslu etkinlik koordinasyonu ve Model UN liderlik tecrübesine sahip.',
         btnSave: 'Rehbere Kaydet',
         btnCv: "CV'yi İncele",
-        cvFile: 'cv.pdf', // Türkçe CV
+        cvFile: 'pcv.pdf', // Türkçe CV
         proj1Title: 'Staj / Yönetim',
         proj1Tag: 'Operasyon',
         proj1Desc: 'T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı, devlet teşkilatı pratikleri ve vatandaş iletişimi koordinasyonu.',
@@ -154,16 +154,16 @@ T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı
         toggleBtn: 'TR',
         role: 'INTERNATIONAL RELATIONS | DIPLOMACY & COORDINATION',
         badge: 'COP31 Operations Team',
-        bio: 'A student of International Relations at Ege University. She completed a 10-month Erasmus study programme in Spain. She has experience in public administration, crisis resolution, the coordination of multinational events and Model UN leadership.',
+        bio: 'International Relations student at Ege University with 10 months of Erasmus experience in Spain. Proficient in public administration, conflict resolution, multinational event coordination, and Model UN leadership.',
         btnSave: 'Save Contact',
         btnCv: 'View Resume',
-        cvFile: 'cv-en.pdf', // İngilizce CV
-        proj1Title: 'Staj / Yönetim',
-        proj1Tag: 'Operation',
-        proj1Desc: 'Coordination of inter-agency information flow, government organisational practices and communication with citizens within the Bayraklı District Governor’s Office, Republic of Turkey.',
-        proj2Title: 'Model UN Secretariat & Organisation',
+        cvFile: 'pcv.pdf', // Varsa 'pcv-en.pdf' yapabilirsin
+        proj1Title: 'Internship / Public Administration',
+        proj1Tag: 'Operations',
+        proj1Desc: 'Coordination of inter-institutional information flow, state protocol practices, and citizen relations at the Governorship of Izmir Bayraklı.',
+        proj2Title: 'Model UN Secretariat & Organization',
         proj2Tag: 'Leadership & Crisis Management',
-        proj2Desc: 'Conference management and budget administration for an event with over 500 participants; coordination of international participants and logistical support for the İZFAŞ Marble Fair.',
+        proj2Desc: 'Led a 500+ attendee conference with full budget oversight; provided international guest coordination and logistics support at İZFAŞ Marble Fair.',
         footer: 'Contactless NFC Sharing • COP31'
       }
     };
@@ -172,6 +172,7 @@ T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı
       currentLang = currentLang === 'tr' ? 'en' : 'tr';
       const c = content[currentLang];
 
+      document.documentElement.lang = currentLang;
       document.getElementById('langText').textContent = c.toggleBtn;
       document.getElementById('roleTitle').textContent = c.role;
       document.getElementById('badgeText').textContent = c.badge;
@@ -179,7 +180,7 @@ T.C. İzmir Bayraklı Kaymakamlığı bünyesinde kurumlar arası bilgi akışı
       document.getElementById('btnSave').textContent = c.btnSave;
       document.getElementById('btnCv').textContent = c.btnCv;
       
-      // CV Linkini Dile Göre Güncelle:
+      // CV Linkini Güncelle:
       document.getElementById('cvLink').setAttribute('href', c.cvFile);
 
       document.getElementById('proj1Title').textContent = c.proj1Title;
